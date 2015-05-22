@@ -1,0 +1,34 @@
+# See https://atom.io/docs/latest/hacking-atom-package-word-count#menus for more details
+'context-menu':
+  'atom-workspace': [
+    {
+      label: 'codenav'
+      submenu: [
+        {label: 'Inspect Element', command: 'core:inspect'}
+        {type: 'separator'}
+        {label: 'Selector All', command: 'core:select-all'}
+        {type: 'separator'}
+        {label: 'Deleted Selected Text', command: 'core:delete'}
+      ]
+    }
+  ]
+  'atom-text-editor': [
+    {
+      'label': 'Toggle codenav'
+      'command': 'codenav:toggle'
+    }
+  ]
+'menu': [
+  {
+    'label': 'Packages'
+    'submenu': [
+      'label': 'codenav'
+      'submenu': [
+        {
+          'label': 'Toggle'
+          'command': 'codenav:toggle'
+        }
+      ]
+    ]
+  }
+]

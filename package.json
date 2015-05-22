@@ -1,0 +1,29 @@
+{
+  "name": "codenav",
+  "main": "./lib/codenav",
+  "version": "0.0.0",
+  "description": "A short description of your package",
+  "activationCommands": {
+    "atom-workspace": "codenav:toggle"
+  },
+  "repository": "https://github.com/flier/codenav",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=0.50.0 <2.0.0"
+  },
+  "dependencies": {
+    "atom-logger": "^0.1.1",
+    "sphinxapi": "^1.1.1",
+    "which": "^1.1.1"
+  },
+  "devDependencies": {
+    "coffeelint": "^1.9.7"
+  },
+  "consumedServices": {
+    "status-bar": {
+      "versions": {
+        "^1.0.0": "consumeStatusBar"
+      }
+    }
+  }
+}
