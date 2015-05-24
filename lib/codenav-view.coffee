@@ -11,12 +11,23 @@ class CodenavView
     message.classList.add('message')
     @element.appendChild(message)
 
+    @modalPanel = atom.workspace.addTopPanel(item: @getElement(), visible: false)
+
   # Returns an object that can be retrieved when package is activated
   serialize: ->
 
   # Tear down any state and detach
   destroy: ->
     @element.remove()
+    @modalPanel.destroy()
 
   getElement: ->
     @element
+
+  toggle: ->
+    console.log 'Codenav was toggled!'
+
+    if @modalPanel.isVisible()
+      @modalPanel.hide()
+    else
+      @modalPanel.show()

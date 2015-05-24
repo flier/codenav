@@ -2,22 +2,48 @@
   "name": "codenav",
   "main": "./lib/codenav",
   "version": "0.0.0",
+  "keywords": [
+    "code",
+    "tags",
+    "searching"
+  ],
   "description": "A short description of your package",
   "activationCommands": {
     "atom-workspace": "codenav:toggle"
   },
   "repository": "https://github.com/flier/codenav",
+  "author": {
+    "name": "Flier Lu",
+    "email": "flier.lu@gmail.com"
+  },
   "license": "MIT",
   "engines": {
     "atom": ">=0.50.0 <2.0.0"
   },
   "dependencies": {
     "atom-logger": "^0.1.1",
+    "promise": "^7.0.1",
     "sphinxapi": "^1.1.1",
+    "sprintf-js": "^1.0.2",
+    "underscore": "^1.8.3",
     "which": "^1.1.1"
   },
   "devDependencies": {
     "coffeelint": "^1.9.7"
+  },
+  "providedServices": {
+    "indexService": {
+      "description": "Index code with keywords and tags",
+      "versions": {
+        "1.0.0": "provideIndexService"
+      }
+    },
+    "searchService": {
+      "description": "Search code base on keywords and tags",
+      "versions": {
+        "1.0.0": "provideSearchService"
+      }
+    }
   },
   "consumedServices": {
     "status-bar": {
